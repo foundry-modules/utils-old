@@ -1,0 +1,12 @@
+[submodule "source/serializeJSON"]
+	path = source/serializeJSON
+	url = https://github.com/jstonne/jquery.fn.serializeJSON.git
+[submodule "source/isDeferred"]
+	path = source/isDeferred
+	url = https://github.com/jstonne/jquery.isDeferred.git
+[submodule "source/uid"]
+	path = source/uid
+	url = https://github.com/jstonne/jquery.uid.git
+[submodule "source/distinct"]
+	path = source/distinct
+	url = https://github.com/jstonne/jquery.distinct.git
