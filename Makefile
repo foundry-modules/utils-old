@@ -8,7 +8,9 @@ UGLIFY = uglifyjs --unsafe -nc
 BASE_FILES = ${SRC_DIR}/uid/source/jquery.uid.js \
 	${SRC_DIR}/isDeferred/source/jquery.isdeferred.js \
 	${SRC_DIR}/distinct/source/jquery.distinct.js \
-	${SRC_DIR}/serializeJSON/source/jquery.fn.serializejson.js
+	${SRC_DIR}/trimSeparators/source/jquery.trimseparators.js \
+	${SRC_DIR}/number/source/jquery.number.js
+
 
 all: premake body min foundry
 
