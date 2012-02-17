@@ -10,3 +10,9 @@
 [submodule "source/distinct"]
 	path = source/distinct
 	url = https://github.com/jstonne/jquery.distinct.git
+[submodule "source/trimSeparators"]
+	path = source/trimSeparators
+	url = https://github.com/jstonne/jquery.trimSeparators.git
+[submodule "source/number"]
+	path = source/number
+	url = https://github.com/jstonne/jquery.number.git
