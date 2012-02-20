@@ -16,3 +16,9 @@
 [submodule "source/number"]
 	path = source/number
 	url = https://github.com/jstonne/jquery.number.git
+[submodule "source/stretchToFit"]
+	path = source/stretchToFit
+	url = https://github.com/jstonne/jquery.stretchToFit
+[submodule "source/toHTML"]
+	path = source/toHTML
+	url = https://github.com/jstonne/jquery.toHTML.git
