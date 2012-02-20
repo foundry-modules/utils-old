@@ -9,7 +9,9 @@ BASE_FILES = ${SRC_DIR}/uid/source/jquery.uid.js \
 	${SRC_DIR}/isDeferred/source/jquery.isdeferred.js \
 	${SRC_DIR}/distinct/source/jquery.distinct.js \
 	${SRC_DIR}/trimSeparators/source/jquery.trimseparators.js \
-	${SRC_DIR}/number/source/jquery.number.js
+	${SRC_DIR}/number/source/jquery.number.js \
+	${SRC_DIR}/stretchToFit/source/jquery.stretchToFit.js \
+	${SRC_DIR}/toHTML/source/jquery.toHTML.js \
 
 
 all: premake body min foundry
