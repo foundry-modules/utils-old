@@ -1,34 +1,28 @@
-SRC_DIR = source
-BUILD_DIR = build
-FOUNDRY_DIR = ../..
-PRODUCTION_DIR = ${FOUNDRY_DIR}/scripts
-DEVELOPMENT_DIR = ${FOUNDRY_DIR}/scripts_
-UGLIFY = uglifyjs --unsafe -nc
+include ../../build/modules.mk
 
-BASE_FILES = ${SRC_DIR}/uid/source/jquery.uid.js \
-	${SRC_DIR}/isDeferred/source/jquery.isdeferred.js \
-	${SRC_DIR}/distinct/source/jquery.distinct.js \
-	${SRC_DIR}/trimSeparators/source/jquery.trimseparators.js \
-	${SRC_DIR}/number/source/jquery.number.js \
-	${SRC_DIR}/stretchToFit/source/jquery.stretchToFit.js \
-	${SRC_DIR}/toHTML/source/jquery.toHTML.js \
+MODULE = utils
+FILENAME = ${MODULE}.js
+RAWFILE = ${DEVELOPMENT_DIR}/${MODULE}.raw.js
 
+SOURCE = ${SOURCE_DIR}/uid/source/jquery.uid.js \
+	${SOURCE_DIR}/isDeferred/source/jquery.isdeferred.js \
+	${SOURCE_DIR}/distinct/source/jquery.distinct.js \
+	${SOURCE_DIR}/trimSeparators/source/jquery.trimseparators.js \
+	${SOURCE_DIR}/number/source/jquery.number.js \
+	${SOURCE_DIR}/stretchToFit/source/jquery.stretchToFit.js \
+	${SOURCE_DIR}/toHTML/source/jquery.toHTML.js \
 
-all: premake body min foundry
+PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
+DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}
 
-premake:
-	mkdir -p ${BUILD_DIR}
+all: raw module clean
 
-body:
-	@@cat ${BASE_FILES} > ${BUILD_DIR}/jquery.utils.js
+module:
+	${WRAP} ${RAWFILE} > ${DEVELOPMENT}
+	${UGLIFYJS} ${DEVELOPMENT} > ${PRODUCTION}
 
-min:
-	${UGLIFY} ${BUILD_DIR}/jquery.utils.js > ${BUILD_DIR}/jquery.utils.min.js
+raw:
+	cat ${SOURCE} > ${RAWFILE}
 
-foundry:
-	cat ${FOUNDRY_DIR}/build/foundry_intro.js \
-		${BUILD_DIR}/jquery.utils.js \
-		${FOUNDRY_DIR}/build/foundry_outro.js \
-		> ${DEVELOPMENT_DIR}/utils.js
-
-	${UGLIFY} ${DEVELOPMENT_DIR}/utils.js > ${PRODUCTION_DIR}/utils.js
+clean:
+	rm -fr ${RAWFILE}
