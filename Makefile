@@ -11,6 +11,12 @@ SOURCE = ${SOURCE_DIR}/uid/source/jquery.uid.js \
 	${SOURCE_DIR}/number/source/jquery.number.js \
 	${SOURCE_DIR}/stretchToFit/source/jquery.stretchToFit.js \
 	${SOURCE_DIR}/toHTML/source/jquery.toHTML.js \
+	${SOURCE_DIR}/bloop/source/jquery.Bloop.js \
+	${SOURCE_DIR}/remap/source/jquery.Bloop.js \
+	${SOURCE_DIR}/deletes/source/jquery.Bloop.js \
+	${SOURCE_DIR}/threads/source/jquery.Bloop.js \
+	${SOURCE_DIR}/Enqueue/source/jquery.Bloop.js \
+	${SOURCE_DIR}/eventable/source/jquery.Bloop.js \
 
 PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
 DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}

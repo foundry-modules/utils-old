@@ -22,3 +22,21 @@
 [submodule "source/toHTML"]
 	path = source/toHTML
 	url = https://github.com/jstonne/jquery.toHTML.git
+[submodule "source/bloop"]
+	path = source/bloop
+	url = git://github.com/jstonne/jquery.Bloop.git
+[submodule "source/deletes"]
+	path = source/deletes
+	url = git://github.com/jstonne/jquery.deletes.git
+[submodule "source/threads"]
+	path = source/threads
+	url = git://github.com/jstonne/jquery.Threads.git
+[submodule "source/enqueue"]
+	path = source/enqueue
+	url = git://github.com/jstonne/jquery.Enqueue.git
+[submodule "source/eventable"]
+	path = source/eventable
+	url = git://github.com/jstonne/jquery.eventable.git
+[submodule "source/remap"]
+	path = source/remap
+	url = git://github.com/jstonne/jquery.remap.git
