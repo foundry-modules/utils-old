@@ -17,6 +17,7 @@ SOURCE = ${SOURCE_DIR}/uid/source/jquery.uid.js \
 	${SOURCE_DIR}/threads/source/jquery.Threads.js \
 	${SOURCE_DIR}/enqueue/source/jquery.Enqueue.js \
 	${SOURCE_DIR}/eventable/source/jquery.eventable.js \
+	${SOURCE_DIR}/chunk/source/jquery.Chunk.js
 
 PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
 DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}

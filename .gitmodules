@@ -40,3 +40,6 @@
 [submodule "source/remap"]
 	path = source/remap
 	url = git://github.com/jstonne/jquery.remap.git
+[submodule "source/chunk"]
+	path = source/chunk
+	url = git@github.com:jstonne/jquery.Chunk.git
