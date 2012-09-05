@@ -5,16 +5,7 @@
 */
 
 $.fn.disabled = function(x) {
-	if(x === undefined) {
-		return this.hasClass('disabled');
-	} else {
-		if(!!x) {
-			this.addClass('disabled');
-		} else {
-			this.removeClass('disabled');
-		}
-		return this;
-	}
+	return (x === undefined) ? this.hasClass('disabled') : this.toggleClass("disabled", !!x);
 };
 
 $.fn.enabled = function(x) {
