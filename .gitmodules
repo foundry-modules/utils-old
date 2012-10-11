@@ -43,3 +43,6 @@
 [submodule "source/chunk"]
 	path = source/chunk
 	url = git@github.com:jstonne/jquery.Chunk.git
+[submodule "source/throttledAjax"]
+	path = source/throttledAjax
+	url = git@github.com:foundry-modules/throttledAjax.git
