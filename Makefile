@@ -19,6 +19,7 @@ SOURCE = ${SOURCE_DIR}/uid/source/jquery.uid.js \
 	${SOURCE_DIR}/eventable/source/jquery.eventable.js \
 	${SOURCE_DIR}/chunk/source/jquery.Chunk.js \
 	${SOURCE_DIR}/disabled/source/jquery.disabled.js \
+	${SOURCE_DIR}/throttledAjax/source/jquery.throttledAjax.js
 
 PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
 DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}
