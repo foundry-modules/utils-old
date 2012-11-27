@@ -10,6 +10,7 @@ SOURCE = ${SOURCE_DIR}/uid/source/jquery.uid.js \
 	${SOURCE_DIR}/trimSeparators/source/jquery.trimseparators.js \
 	${SOURCE_DIR}/number/source/jquery.number.js \
 	${SOURCE_DIR}/stretchToFit/source/jquery.stretchToFit.js \
+	${SOURCE_DIR}/serializeJSON/source/jquery.fn.serializejson.js \
 	${SOURCE_DIR}/toHTML/source/jquery.toHTML.js \
 	${SOURCE_DIR}/bloop/source/jquery.Bloop.js \
 	${SOURCE_DIR}/remap/source/jquery.remap.js \
