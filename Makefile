@@ -4,7 +4,8 @@ MODULE = utils
 FILENAME = ${MODULE}.js
 RAWFILE = ${DEVELOPMENT_DIR}/${MODULE}.raw.js
 
-SOURCE = ${SOURCE_DIR}/uid/source/jquery.uid.js \
+SOURCE = ${SOURCE_DIR}/IE/source/jquery.IE.js \
+	${SOURCE_DIR}/uid/source/jquery.uid.js \
 	${SOURCE_DIR}/isDeferred/source/jquery.isdeferred.js \
 	${SOURCE_DIR}/distinct/source/jquery.distinct.js \
 	${SOURCE_DIR}/trimSeparators/source/jquery.trimseparators.js \
