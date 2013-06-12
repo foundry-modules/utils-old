@@ -1,10 +1,10 @@
+all: join wrap-core minify
+
 include ../../build/modules.mk
 
 MODULE = utils
-FILENAME = ${MODULE}.js
-RAWFILE = ${DEVELOPMENT_DIR}/${MODULE}.raw.js
 
-SOURCE = ${SOURCE_DIR}/IE/source/jquery.IE.js \
+SOURCE_FILES = ${SOURCE_DIR}/IE/source/jquery.IE.js \
 	${SOURCE_DIR}/uid/source/jquery.uid.js \
 	${SOURCE_DIR}/isDeferred/source/jquery.isdeferred.js \
 	${SOURCE_DIR}/distinct/source/jquery.distinct.js \
@@ -23,18 +23,3 @@ SOURCE = ${SOURCE_DIR}/IE/source/jquery.IE.js \
 	${SOURCE_DIR}/disabled/source/jquery.disabled.js \
 	${SOURCE_DIR}/throttledAjax/source/jquery.throttledAjax.js \
 	${SOURCE_DIR}/callback/source/jquery.callback.js
-
-PRODUCTION = ${PRODUCTION_DIR}/${FILENAME}
-DEVELOPMENT = ${DEVELOPMENT_DIR}/${FILENAME}
-
-all: raw module clean
-
-module:
-	${WRAP} -c ${RAWFILE} > ${DEVELOPMENT}
-	${UGLIFYJS} ${DEVELOPMENT} > ${PRODUCTION}
-
-raw:
-	cat ${SOURCE} > ${RAWFILE}
-
-clean:
-	rm -fr ${RAWFILE}
