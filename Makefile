@@ -22,4 +22,5 @@ SOURCE_SCRIPT_FILES = ${SOURCE_SCRIPT_FOLDER}/IE/source/jquery.IE.js \
 	${SOURCE_SCRIPT_FOLDER}/chunk/source/jquery.Chunk.js \
 	${SOURCE_SCRIPT_FOLDER}/disabled/source/jquery.disabled.js \
 	${SOURCE_SCRIPT_FOLDER}/throttledAjax/source/jquery.throttledAjax.js \
-	${SOURCE_SCRIPT_FOLDER}/callback/source/jquery.callback.js
+	${SOURCE_SCRIPT_FOLDER}/callback/source/jquery.callback.js\
+	${SOURCE_SCRIPT_FOLDER}/visible/source/jquery.visible.js
