@@ -3,7 +3,7 @@
 	var $t	= $(this),
 		$w	= $(window);
 
-	if ($(this).length < 0) return;
+	if ($t.length < 1) return;
 	
 	var viewTop	= $w.scrollTop(),
 	viewBottom	= viewTop + $w.height(),
