@@ -6,7 +6,8 @@ $.IE = (function(){
         all = div.getElementsByTagName('i');
 
     while (
-        div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+    	v++,
+        div.innerHTML = '<!--[if gt IE ' + v + ']><i></i><![endif]-->',
         all[0]
     );
 
