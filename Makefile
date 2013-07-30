@@ -25,5 +25,5 @@ SOURCE_SCRIPT_FILES = ${SOURCE_SCRIPT_FOLDER}/IE/source/jquery.IE.js \
 	${SOURCE_SCRIPT_FOLDER}/callback/source/jquery.callback.js\
 	${SOURCE_SCRIPT_FOLDER}/visible/source/jquery.visible.js \
 	${SOURCE_SCRIPT_FOLDER}/classes/source/jquery.classes.js \
+	${SOURCE_SCRIPT_FOLDER}/buildHTML/source/jquery.buildHTML.js \
 	${SOURCE_SCRIPT_FOLDER}/filterBy/source/jquery.filterBy.js
-
