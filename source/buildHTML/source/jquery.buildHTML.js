@@ -1,28 +1,19 @@
 $.buildHTML = function(html, keepScripts) {
 
-	// Normalize arguments
-	if (keepScripts===undefined) keepScripts = false;
-
-	// Build html fragment
-	var scripts = [],
-		fragment = $($.buildFragment([html], document, scripts));
+	var callback,
+		scripts = [];
 
 	// If we want to remove the script after it is executed
 	if (!keepScripts) {
 
 		// Create script removal callback
-		var callback = document.createElement("script");
-		callback.text = $.callback(function(){$(scripts).remove();}) + "();"
-
-		// When the content is inserted into the DOM,
-		// the callback will execute and remove scripts within it.
-		fragment.append(callback);
-
-		// Add it to the array of scripts so that
-		// the callback script gets removed altogether.
-		scripts.push(callback);
+		callback = document.createElement("script");
+		callback.text = $.callback(function(){$(scripts).remove();}) + "();";
 	}
 
-	// Return the html fragment
-	return fragment;
+	// Build html fragment while keeping a separate reference to the script
+	var fragment = $.buildFragment([html, callback], document, scripts);
+
+	// Convert nodes of the fragment into jquery instance
+	return $($.merge([], fragment.childNodes));
 };
