@@ -4,10 +4,12 @@
 *
 */
 
-$.fn.disabled = function(x) {
-	return (x === undefined) ? this.hasClass('disabled') : this.toggleClass("disabled", !!x);
+$.fn.disabled = function(state) {
+	return (state===undefined) ?
+				(this.is(":disabled") || this.hasClass('disabled')) :
+				this.prop('disabled', !!state).toggleClass("disabled", !!state);
 };
 
-$.fn.enabled = function(x) {
-	return (x===undefined) ? !this.disabled() : this.disabled(!x);
+$.fn.enabled = function(state) {
+	return (state===undefined) ? !this.disabled() : this.disabled(!state);
 };
