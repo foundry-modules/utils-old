@@ -14,3 +14,16 @@
 
 	return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 };
+
+$.fn.selectAll = function() {
+	return this.each(function(){ this.select() });
+};
+
+$.fn.unselect = function() {
+	return this.each(function(){
+		var input = this,
+			value = input.value;
+			input.value += " ";
+			input.value = value;
+	});
+};
