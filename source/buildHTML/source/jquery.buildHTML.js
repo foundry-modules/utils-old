@@ -1,8 +1,10 @@
 $.buildHTML = function(html, keepScripts) {
 
-	// If a jquery element was passed in, convert to html string,
-	// then trim out any whitespace so no unusable text nodes are introduced.
-	var html = $.trim(html instanceof $ ? html.toHTML() : html),
+	// If a jquery element was passed in, return as it is.
+	if (html instanceof $) return html;
+
+	// Trim out any whitespace so no unusable text nodes are introduced.
+	var html = $.trim(html),
 
 		// Build html fragment while keeping a separate reference to the script
 		scripts = [],
