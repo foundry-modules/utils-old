@@ -1,3 +1,3 @@
 $.sanitizeHTML = function(html) {
-	return $($.parseHTML(html)).toHTML();
+	return $($.parseHTML(html, document, true)).toHTML();
 };
