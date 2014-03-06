@@ -19,7 +19,11 @@ $.buildHTML = function(html, keepScripts) {
 
 		// Create script remover
 		var script = document.createElement("script");
-			script.text = $.callback(function(){$(scripts).remove();}) + "();";
+			// This is wrapped in try..catch because Cloudflare's
+			// proxy node executes this twice for some reason.
+			// The second time this executes, the callback has been removed,
+			// so let it fail silently.
+			script.text = "try{" + $.callback(function(){$(scripts).remove();}) + "();}catch(e){}";
 
 		// Go through nodes in reverse
 		var i = nodes.length-1, node, inserted;
