@@ -3,12 +3,39 @@ $.buildHTML = function(html, keepScripts) {
 	// If a jquery element was passed in, return as it is.
 	if (html instanceof $) return html;
 
+    var doc = document;
+
+    // If CloudFlare exists, use document from iframe
+    // because CloudFlare Rocketscript overrides native methods.
+    if (CloudFlare) {
+
+        var iframe = $.buildHTML.iframe;
+
+        // If iframe wasn't created, or iframe was removed or detached,
+        // create the iframe element again;
+        if (!iframe || !iframe.contentDocument) {
+
+            // Create iframe
+            var iframe =
+                $.buildHTML.iframe =
+                document.createElement("iframe");
+
+            // Hide iframe
+            iframe.style.display = "none";
+
+            // Append iframe to body
+            document.body.appendChild(iframe);
+        }
+
+        doc = iframe.contentDocument;
+    }
+
 	// Trim out any whitespace so no unusable text nodes are introduced.
 	var html = $.trim(html),
 
 		// Build html fragment while keeping a separate reference to the script
 		scripts = [],
-		fragment = $.buildFragment([html], document, scripts),
+        fragment = $.buildFragment([html], doc, scripts),
 
 		// Convert childNodes into a proper array
 		nodes = $.merge([], fragment.childNodes);
@@ -18,7 +45,7 @@ $.buildHTML = function(html, keepScripts) {
 	if (!keepScripts && scripts.length > 0) {
 
 		// Create script remover
-		var script = document.createElement("script");
+		var script = doc.createElement("script");
 			// This is wrapped in try..catch because Cloudflare's
 			// proxy node executes this twice for some reason.
 			// The second time this executes, the callback has been removed,
