@@ -7,7 +7,7 @@ $.buildHTML = function(html, keepScripts) {
 
     // If CloudFlare exists, use document from iframe
     // because CloudFlare Rocketscript overrides native methods.
-    if (CloudFlare) {
+    if (window["CloudFlare"]) {
 
         var iframe = $.buildHTML.iframe;
 
