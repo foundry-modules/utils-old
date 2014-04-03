@@ -1,7 +1,10 @@
 $.IE = (function(){
 
-    if (navigator.appVersion.indexOf("MSIE 10") != -1) return 10;
-    
+    var ua = navigator.userAgent;
+    if (ua.match(/MSIE 9/)) return 9;
+    if (ua.match(/MSIE 10/)) return 10;
+    if (ua.match(/rv:11/i)) return 11;
+
     var undef,
         v = 3,
         div = document.createElement('div'),
