@@ -25,9 +25,6 @@
 [submodule "source/bloop"]
 	path = source/bloop
 	url = git://github.com/jstonne/jquery.Bloop.git
-[submodule "source/deletes"]
-	path = source/deletes
-	url = git://github.com/jstonne/jquery.deletes.git
 [submodule "source/threads"]
 	path = source/threads
 	url = git://github.com/jstonne/jquery.Threads.git
